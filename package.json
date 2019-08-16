@@ -1,0 +1,30 @@
+{
+  "name": "korero",
+  "displayName": "Korero",
+  "version": "1.0.0",
+  "description": "Korero is an Telegram bot for searching subtitles",
+  "author": "Giovani de Oliveira <giovanioliveira@outlook.com.br>",
+  "license": "MIT",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xxgicoxx/korero.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xxgicoxx/korero/issues"
+  },
+  "homepage": "https://github.com/xxgicoxx/korero#readme",
+  "keywords": [
+    "telegram-bot",
+    "telegram",
+    "bot",
+    "subtitles"
+  ],
+  "dependencies": {
+    "opensubtitles-api": "^5.0.1",
+    "telegram-node-bot": "^4.0.5"
+  }
+}
