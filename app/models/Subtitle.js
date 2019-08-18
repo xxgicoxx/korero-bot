@@ -1,21 +1,25 @@
 class Subtitle {
     constructor(url, filename, lang) {
-        this.url = url
-        this.filename = filename,
-        this.lang = lang
+        this.url = url;
+        this.filename = filename;
+        this.lang = lang;
     }
 
-    serialize() {
-        return { 
-            url: this.url ? this.url : undefined,
-            filename: this.filename ? this.filename : undefined,
-            lang: this.lang ? this.lang : undefined
-        }
+    get url() {
+        return this.url;
+    }
+
+    get filename() {
+        return this.filename;
+    }
+
+    get lang() {
+        return this.lang;
     }
 
     toJSON() {
-        return this.serialize()
+        return this.serialize();
     }
 }
 
-module.exports = Subtitle
+module.exports = Subtitle;

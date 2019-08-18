@@ -26,4 +26,4 @@ class InlineModeController extends Telegram.TelegramBaseInlineQueryController {
     }
 }
 
-module.exports = InlineModeController
+module.exports = InlineModeController;

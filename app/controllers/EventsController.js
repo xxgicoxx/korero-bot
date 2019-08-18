@@ -35,4 +35,4 @@ class EventsController extends Telegram.TelegramBaseController {
     }
 }
 
-module.exports = EventsController
+module.exports = EventsController;

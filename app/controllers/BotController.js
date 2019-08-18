@@ -9,4 +9,4 @@ class BotController {
     }
 }
 
-module.exports = BotController
+module.exports = BotController;

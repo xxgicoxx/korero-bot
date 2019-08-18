@@ -3,7 +3,7 @@ const Telegram = require('telegram-node-bot');
 const InlineModeController = require('./controllers/InlineModeController');
 const EventsController = require('./controllers/EventsController');
 const OtherwiseController = require('./controllers/OtherwiseController');
-const BotController = require('./controllers/BotController')
+const BotController = require('./controllers/BotController');
 
 const chatbot = new BotController().start();
 

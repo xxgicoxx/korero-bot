@@ -42,7 +42,7 @@ class TelegramService {
             articleMenu.add(new ArticleMenuItem(`${e.url}`, `${e.filename}`, `${e.url}`, `${e.filename}`, `${e.lang}`).toJSON());
         });
 
-        return articleMenu.get();
+        return articleMenu.menu();
     }
 
     start(auth) {

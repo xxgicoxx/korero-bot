@@ -6,4 +6,4 @@ class OtherwiseController extends Telegram.TelegramBaseController {
     }
 }
 
-module.exports = OtherwiseController
+module.exports = OtherwiseController;

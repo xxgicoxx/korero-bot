@@ -1,29 +1,45 @@
 class ArticleMenuItem {
     constructor(message_text, title, url, caption, description) {
-        this.id = Math.random().toString(36).substring(7)
-        this.type = 'article',
-        this.message_text = message_text
-        this.title = title
-        this.url = url
-        this.caption = caption
-        this.description = description
+        this.id = Math.random().toString(36).substring(7);
+        this.type = 'article';
+        this.message_text = message_text;
+        this.title = title;
+        this.url = url;
+        this.caption = caption;
+        this.description = description;
     }
 
-    serialize() {
-        return { 
-            id: this.id ? this.id : undefined,
-            type: this.type ? this.type : undefined,
-            message_text: this.message_text ? this.message_text : undefined,
-            title: this.title ? this.title : undefined,
-            url: this.url ? this.url : undefined,
-            caption: this.caption ? this.caption : undefined,
-            description: this.description ? this.description : undefined
-        }
+    get id() {
+        return this.id
+    }
+
+    get type() {
+        return this.type;
+    }
+
+    get message_text() {
+        return this.message_text;
+    }
+
+    get title() {
+        return this.title;
+    }
+
+    get url() {
+        return this.url;
+    }
+
+    get caption() {
+        return this.caption;
+    }
+
+    get description() {
+        return this.description;
     }
 
     toJSON() {
-        return this.serialize()
+        return this.serialize();
     }
 }
 
-module.exports = ArticleMenuItem
+module.exports = ArticleMenuItem;
