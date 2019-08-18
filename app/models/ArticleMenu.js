@@ -11,6 +11,12 @@ class ArticleMenu {
         return this.menu;
     }
 
+    serialize() {
+        return { 
+            menu: this.menu ? this.menu : undefined
+        }
+     }
+
     toJSON() {
         return this.serialize();
     }

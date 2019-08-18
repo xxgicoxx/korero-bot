@@ -17,6 +17,14 @@ class Subtitle {
         return this.lang;
     }
 
+    serialize() {
+        return { 
+            url: this.url ? this.url : undefined, 
+            filename: this.filename ? this.filename : undefined, 
+            lang: this.lang ? this.lang : undefined
+        }
+     }
+    
     toJSON() {
         return this.serialize();
     }
