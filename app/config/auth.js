@@ -1,12 +1,12 @@
 const opensubtitles = {
-    useragent: 'TemporaryUserAgent' || process.env.USERAGENT,
-    username: '' || process.env.USERNAME,
-    password: '' || process.env.PASSWORD,
-    ssl: true || process.env.SSL
+    useragent: process.env.USERAGENT || 'TemporaryUserAgent',
+    username: process.env.USERNAME || '',
+    password: process.env.PASSWORD || '',
+    ssl: process.env.SSL || true
 }
 
 const telegram = {
-    token: '' || process.env.TOKEN
+    token: process.env.TOKEN || ''
 }
 
 module.exports = {
