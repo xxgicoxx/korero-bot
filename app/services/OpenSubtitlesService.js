@@ -1,20 +1,15 @@
 const Opensubtitlesapi = require('opensubtitles-api');
 
+const opensubtitlesConfig = require('../configs/opensubtitles');
+
+const opensubtitles = new Opensubtitlesapi(opensubtitlesConfig);
+
 class OpenSubtitles {
+  getSubtitle(scope) {
+    const query = scope.message.text.replace('/search', '');
 
-    constructor(auth) {
-        this.opensubtitles = new Opensubtitlesapi(auth);
-    }
-
-    getSubtitle(query) {
-        return new Promise((resolve, reject) => {
-            this.opensubtitles.search({query: query}).then((response) => {
-                resolve(Object.values(response));
-            }).catch((error) => {
-                reject(error);
-            });
-        });
-    }
+    return opensubtitles.search({ query });
+  }
 }
 
 module.exports = OpenSubtitles;
