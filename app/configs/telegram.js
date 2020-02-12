@@ -1,5 +1,5 @@
 const telegram = {
-  token: process.env.TOKEN || '',
+  token: process.env.KORERO_TELEGRAM_TOKEN || '',
 };
 
 module.exports = telegram;

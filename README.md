@@ -2,7 +2,6 @@
 Telegram bot for searching subtitles.
 
 ![Bot](https://i.imgur.com/zkHn3eg.png)
-![Inline Bot](https://i.imgur.com/Hs2YIaZ.png)
 
 ### Prerequisites
 * [Node.js](https://nodejs.org/en/) - Node.js
@@ -36,7 +35,7 @@ Get your token from @BotFather and set in 'configs/telegram.js'
 # Install dependencies
 npm install
 
-# Run
+# Start
 npm start
 ````
 
