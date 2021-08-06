@@ -1,31 +1,34 @@
 {
-  "name": "korero",
-  "displayName": "Korero",
-  "version": "2.0.0",
+  "name": "korero-bot",
+  "displayName": "Korero Bot",
+  "version": "1.0.0",
   "description": "Telegram bot for searching subtitles",
   "author": "Giovani de Oliveira <giovanioliveira@outlook.com.br>",
   "license": "MIT",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node app/app.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xxgicoxx/korero.git"
+    "url": "https://github.com/xxgicoxx/korero-bot.git"
   },
   "bugs": {
-    "url": "https://github.com/xxgicoxx/korero/issues"
+    "url": "https://github.com/xxgicoxx/korero-bot/issues"
   },
-  "homepage": "https://github.com/xxgicoxx/korero#readme",
+  "homepage": "https://github.com/xxgicoxx/korero-bot#readme",
   "keywords": [
-    "korero",
     "opensubtitles",
+    "bot",
     "subtitles",
     "search"
   ],
   "dependencies": {
-    "opensubtitles-api": "^5.0.1",
-    "telegram-node-bot": "^4.0.5"
+    "dotenv": "^9.0.0",
+    "node-fetch": "^2.6.1",
+    "node-telegram-bot-api": "^0.53.0",
+    "opensubtitles-api": "^5.1.2",
+    "themoviedb.js": "^2.0.1"
   },
   "devDependencies": {
     "eslint": "^6.7.2",
