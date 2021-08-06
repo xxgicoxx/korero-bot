@@ -4,7 +4,7 @@ Telegram bot for searching subtitles.
 ![Bot](https://i.imgur.com/zkHn3eg.png)
 
 # Features
-* /search - Search subtitles
+* /subtitles {query} - Search subtitles
 * /theatres - In Theaters
 * /popular movie - Popular movies
 * /popular person - Popular persons
