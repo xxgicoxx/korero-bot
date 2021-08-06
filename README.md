@@ -21,8 +21,6 @@ Telegram bot for searching subtitles.
 * [Node.js](https://nodejs.org/en/)
 
 # Running
-The server can be run locally and also deployed to your own server.
-
 ### 1. Telegram
 ````
 # Create an Telegram bot
