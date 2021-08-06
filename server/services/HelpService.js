@@ -4,7 +4,7 @@ class HelpService {
       let message = 'I can help you with many things.\n\nYou can control me by sending these commands:\n\n';
 
       const commands = [
-        { command: '/search {query}', description: 'Search subtitle' },
+        { command: '/subtitles {query}', description: 'Search subtitle' },
         { command: '/theatres', description: 'In Theaters' },
         { command: '/popular movie', description: 'Popular movies' },
         { command: '/popular person', description: 'Popular persons' },
