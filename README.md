@@ -21,7 +21,13 @@ Telegram bot for searching subtitles.
 * [Node.js](https://nodejs.org/en/)
 
 # Running
-### 1. Telegram
+### 1. Configure
+````
+# Bot
+Create and configure .env file like .env.example
+````
+
+### 2. Telegram
 ````
 # Create an Telegram bot
 Find @BotFather on Telegram, type /newbot and follow the instructions
@@ -33,7 +39,7 @@ Get your bot username and set 'TELEGRAM_USERNAME' in .env
 Get your token from @BotFather and set 'TELEGRAM_TOKEN' in .env
 ````
 
-### 2. OpenSubtitles
+### 3. OpenSubtitles
 ````
 # Create an OpenSubtitles account
 Create an OpenSubtitles account on https://opensubtitles.org
@@ -45,7 +51,7 @@ Request your own UserAgent https://trac.opensubtitles.org/projects/opensubtitles
 Get your UserAgent and credentials and set in .env
 ````
 
-### 3. TMDb
+### 4. TMDb
 ````
 # Account
 Create an TMDb (https://www.themoviedb.org/) account.
@@ -54,7 +60,7 @@ Create an TMDb (https://www.themoviedb.org/) account.
 You can apply for an API key by clicking the "API" (https://www.themoviedb.org/settings/api) link from the left hand sidebar within your account settings page. You need to have a legitimate business name, address, phone number and description to apply for an API key. Get your API key and set 'TMDB_APIKEY' in .env.
 ````
 
-### 4. Run
+### 5. Run
 ````
 # Install dependencies
 npm install
