@@ -24,6 +24,8 @@ class HelpService {
       await bot.sendMessage(chat.id, message, { parse_mode: 'html' });
     } catch (error) {
       console.error(error);
+
+      await bot.sendMessage(chat.id, 'Error, try again later');
     }
   }
 

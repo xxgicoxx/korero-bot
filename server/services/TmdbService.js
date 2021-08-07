@@ -21,7 +21,7 @@ class TmdbService {
     } catch (error) {
       console.error(error);
 
-      bot.sendMessage(chat.id, 'Error, try again later');
+      await bot.sendMessage(chat.id, 'Error, try again later');
     }
   }
 
@@ -58,7 +58,7 @@ class TmdbService {
     } catch (error) {
       console.error(error);
 
-      bot.sendMessage(chat.id, 'Error, try again later');
+      await bot.sendMessage(chat.id, 'Error, try again later');
     }
   }
 
@@ -92,7 +92,7 @@ class TmdbService {
     } catch (error) {
       console.error(error);
 
-      bot.sendMessage(chat.id, 'Error, try again later');
+      await bot.sendMessage(chat.id, 'Error, try again later');
     }
   }
 }
