@@ -28,7 +28,7 @@
     "node-fetch": "^2.6.1",
     "node-telegram-bot-api": "^0.54.0",
     "opensubtitles-api": "^5.1.2",
-    "themoviedb.js": "^2.0.2"
+    "themoviedb.js": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
