@@ -1,4 +1,5 @@
 const { telegramConfig } = require('../configs');
+const { constants } = require('../utils');
 
 const {
   HelpService,
@@ -17,35 +18,36 @@ class BotController {
 
   async handle() {
     try {
-      this.bot.on('message', async ($) => {
+      this.bot.on(constants.ON_MESSAGE, async ($) => {
         const command = $.text ? $.text.replace(telegramConfig.username, '') : $.text;
 
         switch (command) {
-          case '/theatres':
-            tmdbService.theatres(this.bot, $.chat);
-            break;
-          case '/commands':
-            helpService.commands(this.bot, $.chat);
-            break;
-          case '/help':
+          case constants.COMMAND_START:
+          case constants.COMMAND_COMMANDS:
+          case constants.COMMAND_HELP:
             helpService.help(this.bot, $.chat);
+
+            break;
+          case constants.COMMAND_THEATRES:
+            tmdbService.theatres(this.bot, $.chat);
+
             break;
           default:
             break;
         }
       });
 
-      this.bot.onText(/\/subtitles (.+)/, async ($, match) => {
+      this.bot.onText(constants.COMMAND_SUBTITLES_REGEX, async ($, match) => {
         const query = match[1];
         await openSubtitlesService.search(this.bot, $.chat, query);
       });
 
-      this.bot.onText(/\/popular (.+)/, async ($, match) => {
+      this.bot.onText(constants.COMMAND_POPULAR_REGEX, async ($, match) => {
         const type = match[1];
         tmdbService.popular(this.bot, $.chat, type);
       });
 
-      this.bot.onText(/\/trending (.+)/, async ($, match) => {
+      this.bot.onText(constants.COMMAND_TRENDING_REGEX, async ($, match) => {
         const type = match[1];
         tmdbService.trending(this.bot, $.chat, type);
       });

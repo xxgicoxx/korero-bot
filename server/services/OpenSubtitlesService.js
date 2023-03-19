@@ -1,6 +1,7 @@
 const Opensubtitlesapi = require('opensubtitles-api');
 
 const { opensubtitlesConfig } = require('../configs');
+const { constants } = require('../utils');
 
 const opensubtitles = new Opensubtitlesapi(opensubtitlesConfig);
 
@@ -11,26 +12,28 @@ class OpenSubtitlesService {
       const subtitles = result == null ? null : Object.values(result);
 
       if (!subtitles || !subtitles.length) {
-        await bot.sendMessage(chat.id, 'Subtitle not found');
-      } else {
-        const keyboard = [];
+        await bot.sendMessage(chat.id, constants.MESSAGE_SUBTITLE_NOT_FOUND);
 
-        subtitles.forEach((e) => {
-          keyboard.push([{ text: `[${e.lang}] - ${e.url}` }]);
-        });
-
-        await bot.sendMessage(chat.id, 'Select subtitle', {
-          reply_markup: {
-            keyboard,
-            remove_keyboard: true,
-            one_time_keyboard: true,
-          },
-        });
+        return;
       }
+
+      const keyboard = [];
+
+      subtitles.forEach((e) => {
+        keyboard.push([{ text: `[${e.lang}] - ${e.url}` }]);
+      });
+
+      await bot.sendMessage(chat.id, constants.MESSAGE_SELECT_SUBTITLE, {
+        reply_markup: {
+          keyboard,
+          remove_keyboard: true,
+          one_time_keyboard: true,
+        },
+      });
     } catch (error) {
       console.error(error);
 
-      await bot.sendMessage(chat.id, 'Error, try again later');
+      await bot.sendMessage(chat.id, constants.MESSAGE_ERROR_TRY_AGAIN);
     }
   }
 }
